@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 pt-8">Professional Resume Builder</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 pt-8">TheGrowMate Resume Builder</h1>
         {!resumeData ? (
           <ResumeForm onSubmit={handleSubmit} />
         ) : (
@@ -119,7 +119,7 @@ export default function Home() {
                 {/* Professional Summary */}
                 {resumeData.summary && (
                   <section className="mb-8">
-                    <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Professional Summary</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Summary</h3>
                     <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-wrap">
                       {resumeData.summary}
                     </p>
@@ -128,7 +128,7 @@ export default function Home() {
 
                 {/* Work Experience */}
                 <section className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Professional Experience</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Work Experience</h3>
                   {resumeData.experience.map((exp: Experience, index: number) => (
                     <div key={index} className="mb-6">
                       <div className="flex justify-between items-start mb-2">
@@ -171,7 +171,7 @@ export default function Home() {
 
                 {/* Skills */}
                 <section className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Technical Skills</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 pb-2">Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {resumeData.skills.map((skill: string, index: number) => (
                       <span 
