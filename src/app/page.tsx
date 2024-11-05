@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 pt-8">TheGrowMate Resume Builder</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 pt-8">TheGrowMate Resume Builder (free)</h1>
         {!resumeData ? (
           <ResumeForm onSubmit={handleSubmit} />
         ) : (

@@ -253,7 +253,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
                   value={formData.phoneNumber}
                   onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                   className="text-lg p-3"
-                  placeholder="+1 (555) 123-4567"
+                
                 />
               </div>
 
@@ -270,20 +270,20 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="summary" className="text-lg">Professional Summary</Label>
+              <Label htmlFor="summary" className="text-lg">Summary</Label>
               <Textarea
                 id="summary"
                 value={formData.summary}
                 onChange={(e) => setFormData({ ...formData, summary: e.target.value })}
                 className="h-40 text-lg p-3"
-                placeholder="Write a compelling professional summary highlighting your key achievements and expertise..."
+              
               />
             </div>
           </div>
 
           {/* Experience Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Professional Experience</h3>
+            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Experience</h3>
             {formData.experience.map((exp, index) => (
               <div key={index} className="space-y-4 p-6 border rounded-lg bg-gray-50">
                 <div className="flex justify-between items-center">
@@ -349,9 +349,6 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
                 <div>
                   <Label className="text-sm text-gray-600">Description</Label>
                   <Textarea
-                    placeholder="• Describe your responsibilities and achievements...
-• Use bullet points for better readability...
-• Quantify your achievements where possible..."
                     value={exp.description}
                     onChange={(e) => handleExperienceChange(index, 'description', e.target.value)}
                     className="h-40 text-lg p-3"
@@ -454,7 +451,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
             {formData.skills.map((skill, index) => (
               <div key={index} className="flex gap-4 items-center">
                 <Input
-                  placeholder="e.g., JavaScript, Project Management, Data Analysis"
+                
                   value={skill}
                   onChange={(e) => handleArrayFieldChange(index, e.target.value, 'skills')}
                   className="text-lg p-3"
@@ -487,7 +484,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
             {formData.certifications.map((cert, index) => (
               <div key={index} className="flex gap-4 items-center">
                 <Input
-                  placeholder="e.g., AWS Certified Solutions Architect"
+                
                   value={cert}
                   onChange={(e) => handleArrayFieldChange(index, e.target.value, 'certifications')}
                   className="text-lg p-3"
@@ -520,7 +517,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
             {formData.languages.map((language, index) => (
               <div key={index} className="flex gap-4 items-center">
                 <Input
-                  placeholder="e.g., English (Native), Spanish (Fluent)"
+               
                   value={language}
                   onChange={(e) => handleArrayFieldChange(index, e.target.value, 'languages')}
                   className="text-lg p-3"
@@ -549,7 +546,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
 
           {/* Professional Links */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Professional Links (Optional)</h3>
+            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Social Media Links (Optional)</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="linkedinLink" className="text-lg">LinkedIn Profile</Label>
@@ -559,7 +556,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
                   value={formData.linkedinLink}
                   onChange={(e) => setFormData({ ...formData, linkedinLink: e.target.value })}
                   className="text-lg p-3"
-                  placeholder="https://linkedin.com/in/username"
+                 
                 />
               </div>
 
@@ -571,7 +568,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
                   value={formData.githubLink}
                   onChange={(e) => setFormData({ ...formData, githubLink: e.target.value })}
                   className="text-lg p-3"
-                  placeholder="https://github.com/username"
+                 
                 />
               </div>
 
@@ -583,7 +580,7 @@ export default function ResumeForm({ onSubmit }: ResumeFormProps) {
                   value={formData.portfolioLink}
                   onChange={(e) => setFormData({ ...formData, portfolioLink: e.target.value })}
                   className="text-lg p-3"
-                  placeholder="https://yourportfolio.com"
+                  
                 />
               </div>
             </div>
